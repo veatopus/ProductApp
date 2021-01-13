@@ -1,0 +1,11 @@
+include ':feature-product-info'
+include ':feature-product'
+include ':exceptions'
+include ':data:model'
+include ':data:local'
+include ':data:network'
+include ':core-lybrary'
+include ':core-utils'
+include ':data'
+include ':app'
+rootProject.name = "ProductApp"

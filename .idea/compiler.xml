@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="1.7">
+      <module name="ProductApp.app" target="1.8" />
+      <module name="ProductApp.core-utils" target="1.8" />
+      <module name="ProductApp.data" target="1.8" />
+      <module name="ProductApp.data.local" target="1.8" />
+      <module name="ProductApp.data.model" target="1.8" />
+      <module name="ProductApp.data.network" target="1.8" />
+      <module name="ProductApp.data.repository" target="1.8" />
+      <module name="ProductApp.feature-product" target="1.8" />
+      <module name="ProductApp.feature-product-info" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
