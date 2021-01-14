@@ -22,7 +22,6 @@
             android:layout_margin="16dp"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
-            android:src="@android:mipmap/sym_def_app_icon"
             app:layout_constraintTop_toBottomOf="@id/tv_name" />
 
         <Button

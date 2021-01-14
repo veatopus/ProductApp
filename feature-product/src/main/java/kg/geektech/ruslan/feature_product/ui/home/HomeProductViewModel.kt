@@ -8,12 +8,13 @@ import kg.geektech.ruslan.model.navigation.NavigationProvider
 class HomeProductViewModel(
     override val repository: ProductRepository,
     override val navigationProvider: NavigationProvider
-) : BaseProductViewModel(repository, navigationProvider)  {
+) : BaseProductViewModel(repository, navigationProvider) {
 
     override fun getProduct() {
-        repository.getProduct().observeForever {
-            isLoading.value = it.status == Status.LOADING
-            if (it.status == Status.SUCCESS && it.data != null) product.value = it.data!!
-        }
+        if (product.value == null)
+            repository.getProduct().observeForever {
+                isLoading.value = it.status == Status.LOADING
+                if (it.status == Status.SUCCESS && it.data != null) product.value = it.data!!
+            }
     }
 }

@@ -24,6 +24,8 @@ class ProductRepository(
     fun getProduct() = liveData(Dispatchers.IO) {
         emit(Resource.loading(null))
         try {
+            emit(Resource.success(dao.getAll()))
+            emit(Resource.loading(null))
             api.fetchAllProduct().forEach { dao.insertWithIgnore(it) }
             emit(Resource.success(dao.getAll()))
         } catch (ex: NoInternetConnection) {

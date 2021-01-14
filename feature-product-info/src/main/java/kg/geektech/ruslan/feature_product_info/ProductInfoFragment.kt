@@ -29,9 +29,9 @@ class ProductInfoFragment : BaseFragment<ProductInfoViewModel, FragmentProductIn
         mViewModel?.product?.observe(requireActivity(), { product ->
             binding?.run {
                 tvName.text = product.name
-                tvCompany.text = product.company
-                tvPrice.text = product.price
-                tvDesc.text = product.desc
+                tvCompany.text = "company: ${product.company}"
+                tvPrice.text = "price: ${product.price}"
+                tvDesc.text = "desc: \n${product.desc}"
                 product.img?.let { ivImage.loadImage(it) }
                 btnShop.isSelected = product.isChoice
                 btnFavorite.isSelected = product.isFavourite
