@@ -1,5 +1,6 @@
 package kg.geektech.ruslan.feature_product_info
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import kg.geektech.ruslan.core_utils.utils.helpers.isVisible
@@ -24,6 +25,7 @@ class ProductInfoFragment : BaseFragment<ProductInfoViewModel, FragmentProductIn
         id?.let { mViewModel?.getProductById(it) }
     }
 
+    @SuppressLint("SetTextI18n")
     override fun setUpViewModelObs() {
         super.setUpViewModelObs()
         mViewModel?.product?.observe(requireActivity(), { product ->
